@@ -1,0 +1,24 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Learning TypeScript",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./src/index.ts",
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashpanda-01/TypeScript.git"
+  },
+  "author": "Akash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akashpanda-01/TypeScript/issues"
+  },
+  "homepage": "https://github.com/akashpanda-01/TypeScript#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
