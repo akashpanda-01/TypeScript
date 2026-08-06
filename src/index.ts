@@ -1,2 +1,7 @@
-console.log("Hello World");
-console.log("Hello World");
+function greet(name: string): string{
+    return `Hello ${name}`;
+};
+
+const username: string = "Akash";
+
+console.log(greet(username));
