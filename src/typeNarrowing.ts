@@ -7,7 +7,7 @@ function getChai(kind: string | number){
 // console.log(getChai(2));
 
 
-function serveMsg(msg?: string){
+function serveMsg(msg?: string) : string{
     if(msg){
         return `Serving ${msg}`;
     };
@@ -45,7 +45,7 @@ function serve(chai : kulhadChai | cutting){
         return chai.serve();
     };
 };
-let kulhad = new kulhadChai();
+// let kulhad = new kulhadChai();
 // console.log(serve(kulhad));
 
 
