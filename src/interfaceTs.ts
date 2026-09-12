@@ -38,9 +38,9 @@ let b = new Chai()
 
 
 type Response = {ok: true} | {ok: false};
-class MyRes implements Response{
-    ok: boolean = true; // It will Also Throw Error.
-};
+// class MyRes implements Response{
+//     ok: boolean = true; // It will Also Throw Error.
+// };
 
 type TeaType = "masala" | "Ginger" | "Lemon";
 function orderChai(t: TeaRecipe){
