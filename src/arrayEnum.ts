@@ -83,10 +83,10 @@ let threeDimensionalGeneric: Array<Array<Array<number>>> = [
 // READONLY ARRAY;
 let readArr: readonly number[] = [1, 2, 3];
 // readArr.push(4); // Not Valid
-console.log(readArr);
+// console.log(readArr);
 // Generic
 let readArrGeneric: ReadonlyArray<number> = [1, 1, 1];
-console.log(readArrGeneric);
+// console.log(readArrGeneric);
 
 
 // TUPELS
@@ -94,4 +94,55 @@ console.log(readArrGeneric);
 // and the types of each position.
 
 let tupleArr: [string, number] = ["a", 2];
-console.log(tupleArr);
+// console.log(tupleArr);
+
+
+
+
+// ================== ENUM =========================
+enum Status {
+  Pending,
+  Shipped,
+  Delivered
+};
+// console.log(Status.Delivered); //2
+let status = Status.Delivered;
+// console.log(status); //2
+
+enum Status1 {
+  Pending = 101,
+  Served, // 102
+  Canceled // 103
+};
+// console.log(Status1.Served);
+
+// Enum With Functions
+enum ChaiType {
+  Masala = "masala",
+  Ginger = "ginger"
+};
+function makeChai(type: ChaiType){
+  console.log(`making: ${type}`);
+};
+makeChai(ChaiType.Ginger);
+
+
+// Enum With Object
+enum OrderStatus {
+  Pending = "Pending",
+  Shipped = "Shipped",
+  Delivered = "Delivered"
+};
+type Order {
+  id: string,
+  status: OrderStatus
+};
+const order: Order = {
+  id: "ORD101",
+  status: OrderStatus.Pending,
+};
+// later we ccan change it's status according our enum[shipped, Delivered];
+order.status = OrderStatus.Delivered;
+// order.status = "Random"; // not valid;
+
+
