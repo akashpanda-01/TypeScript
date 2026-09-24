@@ -133,7 +133,7 @@ enum OrderStatus {
   Shipped = "Shipped",
   Delivered = "Delivered"
 };
-type Order {
+type Order = {
   id: string,
   status: OrderStatus
 };
