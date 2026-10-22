@@ -50,4 +50,58 @@ class ChildUser extends ParentUser {
     };
 };
 const x2 = new ChildUser();
-x2.showName() //  Accessible
+// x2.showName() //  Accessible
+
+
+class Teacher {
+    private salary: number;
+
+    name: string;
+    dept: string;
+    subject: string;
+
+    constructor();
+    constructor(name: string, dept: string);
+    constructor(name: string, dept: string, subject: string);
+
+    constructor(name?: string, dept?: string, subject?: string){
+        this.name = name ?? "Unknown";
+        this.dept = dept ?? "Unknown";
+        this.subject =  subject ?? "Unknown";
+    }
+
+    setSalary(s: number): void{
+        this.salary = s;
+    };
+    getSalary(): number{
+        return this.salary;
+    }
+
+};
+
+// const t1 = new Teacher();
+// const t2 = new Teacher("B", "b");
+// const t3 = new Teacher("A", "a", "a");
+
+// console.log(t1, t2, t3);
+
+type U1 = {
+    name: string;
+    address: {
+        city: string;
+    };
+}
+const U: U1 = {
+    name: "A",
+    address: {
+        city: "cuttack"
+    }
+};
+
+const copy: U1 = {...U};
+console.log(U.address, U.name);
+console.log(copy.address, copy.name);
+copy.address.city = "bhubaneswar";
+copy.name = "B";
+console.log(U.address, U.name);
+console.log(copy.address, copy.name);
